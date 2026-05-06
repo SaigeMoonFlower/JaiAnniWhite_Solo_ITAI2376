@@ -18,6 +18,9 @@ The system uses:
 - Retrieval system (RAG-style) to find relevant knowledge
 - Generator module to produce responses
 
+## Architecture
+See architecture.png for the system design of the chatbot.
+
 ### Architecture Flow
 User Input → Intent Classifier → RAG Retrieval → Generator → Output
 
