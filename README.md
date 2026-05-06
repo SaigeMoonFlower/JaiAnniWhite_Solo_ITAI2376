@@ -1,7 +1,7 @@
 # AI Study Assistant — ITAI 2376 Final Project
 
 ## Project Title
-Jai'AnniWhite_Solo_ITAI2376
+JaiAnniWhite_Solo_ITAI2376
 
 ## Description
 This project is a Python-based AI Study Assistant that helps students learn computer science concepts using question answering, summarization, and quiz generation.
