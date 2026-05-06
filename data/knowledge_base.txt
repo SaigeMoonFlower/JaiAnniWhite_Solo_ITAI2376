@@ -1,0 +1,11 @@
+Python is a high-level programming language used for AI, web development, and automation.
+
+Computer science is the study of algorithms, programming, and problem solving.
+
+A variable stores data that can change.
+
+A function is reusable code that performs a task.
+
+A loop repeats instructions until a condition is met.
+
+An algorithm is a step-by-step solution to a problem.
