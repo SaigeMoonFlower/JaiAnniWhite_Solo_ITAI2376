@@ -4,7 +4,11 @@ class IntentClassifier:
 
         if "quiz" in text:
             return "quiz"
-        elif "summarize" in text:
+
+        if "summarize" in text:
             return "summarize"
-        else:
+
+        if "what is" in text or "who is" in text or "?" in text:
             return "question"
+
+        return "other"

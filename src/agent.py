@@ -16,7 +16,19 @@ class StudyAgent:
         intent = self.intent.predict(user_input)
         context = self.rag.retrieve(user_input)
 
-        return self.generator.generate(intent, context)
+        if intent == "question":
+            task = user_input
+
+        elif intent == "quiz":
+            task = "quiz"
+
+        elif intent == "summarize":
+            task = "summarize"
+
+        else:
+            task = user_input
+
+        return self.generator.generate(task, context)
 
 
 if __name__ == "__main__":
