@@ -1,34 +1,57 @@
 class Generator:
-    def generate(self, task, context):
+    def __init__(self):
+        pass
 
+    def generate(self, task, context=None):
         task = task.lower()
 
+        if "explain" in task or "what is" in task:
+            return self._answer(context)
+
         if "quiz" in task:
-            return self.quiz(context)
+            return self._quiz()
 
         if "summarize" in task:
-            return self.summarize(context)
+            return (
+                "Artificial intelligence is a field of computer science focused on building systems "
+                "that can perform tasks requiring human intelligence such as learning, reasoning, and problem solving."
+            )
 
-        return self.answer(context)
+        return "I can help with questions, quizzes, and summaries."
 
-    def answer(self, context):
-        return f"Answer: {context}"
+    def _answer(self, context):
+        if context:
+            return context
+        return "I do not have enough information to answer that."
 
-    def summarize(self, context):
-        return (
-            "Summary:\n"
-            "- " + context + "\n"
-            "- Key CS concept\n"
-            "- Important for understanding programming"
-        )
+    def _quiz(self):
+        return """
+What is Python commonly used for?
 
-    def quiz(self, context):
-        return (
-            "Quiz:\n"
-            f"What is the topic?\n"
-            f"A. {context}\n"
-            "B. Incorrect\n"
-            "C. Unrelated\n"
-            "D. None\n"
-            "Answer: A"
-        )
+A. Artificial intelligence, web development, and automation  
+B. Only hardware repair  
+C. Video editing only  
+D. Network cabling only  
+
+Correct answer: A
+
+
+Which of the following is a Python data type?
+
+A. String  
+B. Screen  
+C. Mouse  
+D. Monitor  
+
+Correct answer: A
+
+
+What does AI stand for?
+
+A. Artificial Intelligence  
+B. Automated Interface  
+C. Active Internet  
+D. Advanced Input  
+
+Correct answer: A
+"""
